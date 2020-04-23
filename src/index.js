@@ -11,16 +11,15 @@ import Logout from "./components/logout";
 import Landing from "./components/landingpage";
 import Main from "./components/main";
 import Login from "./components/login";
-import User from "./components/variables";
 
 firebase.auth().onAuthStateChanged(function (user) {
     console.log("state changed");
     //console.log("user: ", user);
     if(user){
         console.log("logged in: ", user.displayName);
-        //document.getElementById("loginButton").classList.toggle("hide");
-        //document.getElementById("ifLoggedIn").classList.toggle("hide");
-        //document.getElementById("nextButton").classList.toggle("hide");
+        document.getElementById("loginButton").classList.toggle("hide");
+        document.getElementById("ifLoggedIn").classList.toggle("hide");
+        document.getElementById("nextButton").classList.toggle("hide");
     }else{
         console.log("logged out");
     }
@@ -29,13 +28,13 @@ render((
     <Router>
         <Switch>
             <Route exact path="/" choices>
-                <div>
+                <div id='loginBackground'>
                     <Login />
                     <Landing />
                 </div>
             </Route>
             <Route path="/main">
-                <div>
+                <div className='background'>
                     <Logout />
                     <Main />
                 </div>

@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body{
+
+}
+#loginBackground{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  background-color: lightgrey;
+}
+.background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  background-color: lightgrey;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:visited{
+  color: black;
+}
+.bttn{
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  background: white;
+  box-shadow: 2px 3px black;
+  text-decoration: none;
+  transition: padding 0.4s;
+}
+.bttn:hover{
+  cursor: pointer;
+  padding: 12px;
+}
+.bttn:active{
+
+}
+.hide{
+  display: none;
+}

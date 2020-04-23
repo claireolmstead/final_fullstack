@@ -58,9 +58,9 @@ export default class Login extends Component{
                     <h2>Login With</h2>
                 </header>
                 <div>
-                    <button onClick={this.loginWithGoogle} className="loginBtnStyle loginBtn" id="loginButton">Login With Google</button><br/>
+                    <button onClick={this.loginWithGoogle} className="loginBtnStyle loginBtn bttn" id="loginButton">Login With Google</button><br/>
                     <p id="ifLoggedIn" className="hide">You're logged in!</p>
-                    <button onClick={this.next}><Link to='/main'>Next</Link></button>
+                    <button onClick={this.next} className='bttn'><Link to='/main'>Next</Link></button>
                 </div>
                 <footer id="accountFix">
                     <a className="loginFooter" href="https://accounts.google.com/signin/v2/recoveryidentifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">Forgot your password?</a>
