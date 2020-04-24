@@ -11,6 +11,7 @@ import Logout from "./components/logout";
 import Landing from "./components/landingpage";
 import Main from "./components/main";
 import Login from "./components/login";
+import Footer from "./components/footer";
 
 firebase.auth().onAuthStateChanged(function (user) {
     console.log("state changed");
@@ -28,13 +29,14 @@ render((
     <Router>
         <Switch>
             <Route exact path="/" choices>
-                <div id='loginBackground'>
-                    <Login />
+                <div className="flexContainer">
                     <Landing />
+                    <Login/>
                 </div>
+                <Footer/>
             </Route>
             <Route path="/main">
-                <div className='background'>
+                <div>
                     <Logout />
                     <Main />
                 </div>

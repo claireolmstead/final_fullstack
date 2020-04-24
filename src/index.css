@@ -11,29 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-body{
+div#root{
+}
+h1{
 
 }
-#loginBackground{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 50vh;
-  background-color: lightgrey;
-}
-.background{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 50vh;
-  background-color: lightgrey;
+.main{
+  max-width: 90%;
+  margin: 3% auto;
 }
 a{
   text-decoration: none;
   color: black;
+}
+a:hover{
+  color: white;
 }
 a:visited{
   color: black;
@@ -45,15 +37,65 @@ a:visited{
   background: white;
   box-shadow: 2px 3px black;
   text-decoration: none;
-  transition: padding 0.4s;
+  transition: background 0.4s;
 }
 .bttn:hover{
   cursor: pointer;
-  padding: 12px;
+  background: dimgrey;
+  color: white;
 }
 .bttn:active{
 
 }
 .hide{
   display: none;
+}
+
+footer#accountFix{
+  background: #fff7ed;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  width: 96vw;
+  bottom: 0;
+  z-index: 5;
+}
+input{
+  margin: 5px;
+}
+.flexContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#landingpage{
+  background: bisque;
+  width: 46vw;
+  height: 100vh;
+  padding-left: 4vw;
+}
+#landingpage h1 {
+  font-size: 100px;
+}
+#loginpage{
+  padding-right: 4vw;
+  height: 50vh;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#loginpage h2{
+  font-size: 50px;
+}
+#loginpage button{
+  background: #fff7ed;
+  font-size: 20px;
+  transition: background 0.4s;
+}
+#loginpage button:hover{
+  background: bisque;
+  color: black;
 }

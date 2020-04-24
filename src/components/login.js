@@ -46,26 +46,16 @@ export default class Login extends Component{
             let curUser = firebase.auth().currentUser;
             User.uid = curUser.uid;
             User.name = curUser.displayName;
-            Object.freeze(User);
         }
     };
 
     render() {
         return(
-            <div>
-                <header>
-                    <h1>Yes Or No</h1>
-                    <h2>Login With</h2>
-                </header>
-                <div>
-                    <button onClick={this.loginWithGoogle} className="loginBtnStyle loginBtn bttn" id="loginButton">Login With Google</button><br/>
-                    <p id="ifLoggedIn" className="hide">You're logged in!</p>
-                    <button onClick={this.next} className='bttn'><Link to='/main'>Next</Link></button>
-                </div>
-                <footer id="accountFix">
-                    <a className="loginFooter" href="https://accounts.google.com/signin/v2/recoveryidentifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">Forgot your password?</a>
-                    <a className="loginFooter" href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp" target="_blank">Create Account</a>
-                </footer>
+            <div id='loginpage'>
+                <h2>Login</h2>
+                <button onClick={this.loginWithGoogle} className="loginBtnStyle loginBtn bttn" id="loginButton">Login With Google</button><br/>
+                <p id="ifLoggedIn" className="hide">You're logged in!</p>
+                <button onClick={this.next} className='bttn hide' id='nextButton'><Link to='/main'>Next</Link></button>
             </div>
         )
     }

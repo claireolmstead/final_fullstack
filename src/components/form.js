@@ -51,7 +51,7 @@ export default class Form extends Component{
     }
     render() {
         return (
-            <div>
+            <div className='main'>
                 <header>
                     <h1>What do you have going on?</h1>
                 </header>
@@ -59,7 +59,7 @@ export default class Form extends Component{
                     <h2>Add something!</h2>
                     <form onSubmit={this.handleSubmit}>
                         <label>
-                            Title
+                            Title:
                             <input
                                 name="title"
                                 type="text"
@@ -68,7 +68,7 @@ export default class Form extends Component{
                                 onChange={this.handleInputChange} />
                         </label><br />
                         <label>
-                            Location
+                            Location:
                             <input
                                 name="location"
                                 type="text"
@@ -100,9 +100,8 @@ export default class Form extends Component{
                                 onChange={this.handleInputChange} />
                                 hrs
                         </label><br/>
-                        <input type='submit' value='Submit'/>
+                        <input type='submit' value='Submit' className='bttn'/>
                     </form>
-                    <CompleteForm />
                 </main>
             </div>
         );

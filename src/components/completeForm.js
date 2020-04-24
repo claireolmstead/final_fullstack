@@ -22,10 +22,10 @@ export default class CompleteForm extends Component{
     };
     render(){
         return(
-            <div>
+            <div className='main'>
                 <h1>Stuff going on</h1>
                 <button onClick={this.getData} className='bttn'>Get Data</button>
-                <table id='getTable'>
+                <table id='getTable' className='main'>
 
                 </table>
             </div>
