@@ -105,6 +105,12 @@ input{
   right: 0;
   margin: 1% 1% 0 0;
 }
+#logoutName{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1.75% 90px 0 0;
+}
 label{
   font-size: 11px;
   color: dimgrey;
@@ -150,4 +156,9 @@ td{
 }
 #addForm{
   max-width: 220px;
+}
+#addButton{
+  font-size: 16px;
+  max-width: 110px;
+  margin: 0 auto;
 }

@@ -31,7 +31,7 @@ export default class Form extends Component{
         event.preventDefault();
         let db = firebase.firestore();
         //Path.title = this.state.title;
-        alert('Your favorite flavor is: ' + this.state.title);
+        alert('You added: ' + this.state.title);
         //const itemsRef = db.ref('poll');
         const itemsRef = db.collection("poll").doc(User.uid).collection('event').doc();
         const poll = {

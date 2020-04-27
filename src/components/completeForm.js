@@ -3,10 +3,9 @@ import firebase from "./firebase";
 import User from './variables';
 
 export default class CompleteForm extends Component{
-    //getData = () => {
     componentDidMount() {
         let db = firebase.firestore();
-        let entries = db.collection('poll').doc(User.uid).collection('event');
+        let entries = db.collection('poll').doc(User.uid).collection('event').orderBy('date');
         let counter = 0;
         let getId;
         entries.get().then(function (querySnapshot) {
@@ -30,18 +29,23 @@ export default class CompleteForm extends Component{
             });
         });
     };
+
+        //use .onSnapshot(function(doc) for realtime
+        //https://firebase.google.com/docs/firestore/query-data/listen
+
     render(){
         return(
             <div className='main' id='completeForm'>
                 <h1>What do you have going on?</h1>
                 <h2>Stuff going on</h2>
                 <table id='getTable' className='main'>
-                    <th>
-                        <td>Location</td>
-                        <td>Date</td>
-                        <td>Time</td>
-                        <td>Duration</td>
-                    </th>
+                    <tr>
+                        <th>Title</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                    </tr>
                 </table>
             </div>
         )
