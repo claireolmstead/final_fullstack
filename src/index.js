@@ -18,6 +18,8 @@ firebase.auth().onAuthStateChanged(function (user) {
     //console.log("user: ", user);
     if(user){
         console.log("logged in: ", user.displayName);
+        let tagLine = user.displayName + ", you're logged in!";
+        document.getElementById('ifLoggedIn').innerHTML = tagLine;
         document.getElementById("loginButton").classList.toggle("hide");
         document.getElementById("ifLoggedIn").classList.toggle("hide");
         document.getElementById("nextButton").classList.toggle("hide");

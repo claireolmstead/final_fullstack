@@ -54,7 +54,7 @@ export default class Login extends Component{
             <div id='loginpage'>
                 <h2>Login</h2>
                 <button onClick={this.loginWithGoogle} className="loginBtnStyle loginBtn bttn" id="loginButton">Login With Google</button><br/>
-                <p id="ifLoggedIn" className="hide">You're logged in!</p>
+                <p id="ifLoggedIn" className="hide"> </p>
                 <button onClick={this.next} className='bttn hide' id='nextButton'><Link to='/main'>Next</Link></button>
             </div>
         )

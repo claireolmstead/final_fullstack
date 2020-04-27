@@ -2,14 +2,13 @@ import React, {Component} from "react";
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
 import User from './variables';
-import CompleteForm from "./completeForm";
 
 export default class Form extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            title: 'Girls Night',
-            location: 'My House',
+            title: '',
+            location: '',
             date: '',
             duration: 0
         };
@@ -38,6 +37,7 @@ export default class Form extends Component{
         const poll = {
             title: this.state.title,
             date: this.state.date,
+            time: this.state.time,
             location: this.state.location,
             duration: this.state.duration
         };
@@ -46,20 +46,29 @@ export default class Form extends Component{
             title: '',
             location: '',
             date: '',
+            time: '',
             duration: 0
         });
+        document.getElementById("addButton").classList.toggle("hide");
+        document.getElementById("addForm").classList.toggle("hide");
+        document.getElementById("cancelButton").classList.toggle("hide");
     }
+
+    showAdd = () => {
+        document.getElementById("addForm").classList.toggle("hide");
+        document.getElementById("addButton").classList.toggle("hide");
+        document.getElementById("cancelButton").classList.toggle("hide");
+    };
+
     render() {
         return (
             <div className='main'>
-                <header>
-                    <h1>What do you have going on?</h1>
-                </header>
+                <button onClick={this.showAdd} className='bttn' id='addButton'>Add Item</button>
                 <main>
-                    <h2>Add something!</h2>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit} className='hide' id='addForm'>
+                        New Item<br/>
                         <label>
-                            Title:
+                            Title<br/>
                             <input
                                 name="title"
                                 type="text"
@@ -68,7 +77,7 @@ export default class Form extends Component{
                                 onChange={this.handleInputChange} />
                         </label><br />
                         <label>
-                            Location:
+                            Location<br/>
                             <input
                                 name="location"
                                 type="text"
@@ -76,7 +85,7 @@ export default class Form extends Component{
                                 onChange={this.handleInputChange} />
                         </label><br />
                         <label>
-                            Date:
+                            Date<br/>
                             <input
                                 name="date"
                                 type="date"
@@ -84,7 +93,7 @@ export default class Form extends Component{
                                 onChange={this.handleInputChange} />
                         </label><br />
                         <label>
-                            Time:
+                            Time<br/>
                             <input
                                 name="time"
                                 type="time"
@@ -92,7 +101,7 @@ export default class Form extends Component{
                                 onChange={this.handleInputChange} />
                         </label><br />
                         <label>
-                            Duration:
+                            Duration<br/>
                             <input
                                 name="duration"
                                 type="number"
@@ -102,6 +111,7 @@ export default class Form extends Component{
                         </label><br/>
                         <input type='submit' value='Submit' className='bttn'/>
                     </form>
+                    <button onClick={this.showAdd} className='bttn hide' id='cancelButton'>Cancel</button>
                 </main>
             </div>
         );

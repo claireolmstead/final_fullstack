@@ -5,8 +5,8 @@ export default class Main extends Component{
     render() {
         return(
             <div>
-                <Form/>
                 <CompleteForm />
+                <Form/>
             </div>
         )
     }

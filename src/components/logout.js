@@ -9,7 +9,7 @@ export default class Logout extends Component{
     render() {
         return(
             <div>
-                <button onClick={this.signOut} className="signOutButton loginBtn bttn"><Link to='/'>Log Out</Link></button>
+                <button onClick={this.signOut} className="signOutButton bttn"><Link to='/'>Log Out</Link></button>
             </div>
         )
     }
