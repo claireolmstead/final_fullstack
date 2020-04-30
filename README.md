@@ -1,3 +1,8 @@
+#Final Project
+
+This project was an exercise in using Google OAuth and connecting data to each individual user in a database.  I ended up choosing to use React.js as the framework to develope the bones of my site, Firsebase for OAuth, Firestore for the backend, and Heroku as the machanism for deployment.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
